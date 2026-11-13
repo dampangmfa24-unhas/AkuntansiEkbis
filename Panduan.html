@@ -1,0 +1,635 @@
+<!--
+  PANDUAN — isi halaman Panduan di aplikasi.
+  Setiap <article> = satu topik. Atribut:
+    id          : kode unik (dipakai tautan internal: href="#b3")
+    data-bab    : A–H
+    data-judul  : judul topik
+    data-akses  : "semua" atau "pemilik" (bagian pemilik disaring di server)
+    data-tpl    : nama template (dipisah |) yang membuka topik ini lewat tombol ? di Catat
+    data-kata   : kata kunci tambahan untuk pencarian
+  Rujukan konsep: Weygandt, Kimmel & Kieso, Accounting Principles (IFRS Version), bab 1–5, 17, 18;
+  disesuaikan dengan SAK EMKM. Seluruh teks ditulis ulang; angka Cornafa adalah ilustrasi.
+-->
+
+<!-- ===================== A. MULAI CEPAT ===================== -->
+<article id="a1" data-bab="A" data-judul="Masuk, PIN, dan tampilan" data-akses="semua" data-kata="login pin lupa keluar mode gelap terang">
+<p>Setiap orang masuk dengan <b>nama pengguna</b> dan <b>PIN</b> 6–12 angka yang dibuat Pemilik. Centang <i>Ingat saya</i> agar tidak perlu masuk lagi selama 30 hari di HP itu.</p>
+<ul>
+<li><b>Ganti PIN</b>: Profil → Ganti PIN.</li>
+<li><b>Mode terang/gelap</b>: ketuk ikon matahari/bulan di pojok kanan atas, atau Profil → Tampilan.</li>
+<li><b>HP dipakai bergantian?</b> Pilih Profil → Keluar setelah selesai.</li>
+</ul>
+<div class="tip"><b>Lupa PIN?</b> Minta Pemilik membuat PIN baru di Pengaturan → Pengguna. Kalau Pemilik sendiri yang lupa, buka spreadsheet → menu 💰 Keuangan → 👤 Atur PIN Pemilik.</div>
+<p class="note">Lima kali salah PIN membuat akun terkunci 15 menit.</p>
+</article>
+
+<article id="a2" data-bab="A" data-judul="Mencatat transaksi pertama (Cepat)" data-akses="semua" data-kata="catat cepat template simpan">
+<p>Mode <b>Cepat</b> cocok untuk 90% transaksi harian. Anda cukup memilih jenis kejadiannya; aplikasi menyusun debit dan kredit sendiri.</p>
+<ol class="steps">
+<li>Ketuk tombol <b>+</b> (HP) atau <b>Catat transaksi</b> (laptop).</li>
+<li>Pilih <b>Jenis transaksi</b>, misalnya <i>Penjualan tunai</i>.</li>
+<li>Isi nominal besar di atas, lalu tanggal dan keterangan.</li>
+<li>Pilih ke mana uang masuk: Kas, Bank, atau DANA/QRIS.</li>
+<li>Lihat kotak <b>Jurnal yang akan dicatat</b>, lalu ketuk <b>Simpan transaksi</b>.</li>
+</ol>
+<h4>Contoh: jual 3 cup Medium lewat QRIS</h4>
+<p>Harga Medium Rp15.000, jadi nilai penjualan Rp45.000. Modal tiap cup Medium Rp6.000, jadi harga pokok Rp18.000.</p>
+<table class="jx"><tr><th>Akun</th><th>Debit</th><th>Kredit</th></tr>
+<tr><td>1107 DANA/QRIS</td><td>45.000</td><td></td></tr>
+<tr><td>4102 Penjualan</td><td></td><td>45.000</td></tr>
+<tr><td>5001 Harga Pokok Penjualan</td><td>18.000</td><td></td></tr>
+<tr><td>1105 Persediaan Barang Jadi</td><td></td><td>18.000</td></tr></table>
+<p>Tombol <b>?</b> di samping Jenis transaksi membuka penjelasan template yang sedang dipilih.</p>
+</article>
+
+<article id="a3" data-bab="A" data-judul="Kapan memakai mode Jurnal" data-akses="semua" data-kata="jurnal manual debit kredit beberapa baris">
+<p>Pakai mode <b>Jurnal</b> bila satu kejadian menyentuh lebih dari dua akun dan tidak ada templatenya. Anda mengisi sendiri akun, debit, dan kredit; aplikasi menolak menyimpan kalau totalnya belum sama.</p>
+<h4>Contoh: beli jagung Rp300.000, dibayar Rp100.000 tunai, sisanya utang</h4>
+<table class="jx"><tr><th>Akun</th><th>Debit</th><th>Kredit</th></tr>
+<tr><td>1104 Persediaan Bahan Baku</td><td>300.000</td><td></td></tr>
+<tr><td>1101 Kas</td><td></td><td>100.000</td></tr>
+<tr><td>2101 Utang Usaha</td><td></td><td>200.000</td></tr></table>
+<p>Pada baris akun kas (Kas, Bank, DANA/QRIS), pilih juga kategori arus kas, misalnya <i>Operasi · Pembelian persediaan</i>.</p>
+</article>
+
+<article id="a4" data-bab="A" data-judul="Membaca Beranda dalam 1 menit" data-akses="semua" data-kata="dashboard beranda laba kas grafik">
+<ul>
+<li><b>Kartu biru</b>: Pendapatan − Harga pokok − Beban operasi = <b>Laba bersih</b> untuk periode yang dipilih. Di bawahnya ada margin dan perbandingan dengan bulan lalu.</li>
+<li><b>Kas &amp; bank</b>: uang yang benar-benar ada di akhir periode, dirinci per akun.</li>
+<li><b>Posisi usaha</b>: piutang (belum dibayar pembeli), persediaan, utang, dan modal pemilik.</li>
+<li><b>Tren</b>: batang biru pendapatan, batang oranye beban, titik hijau laba per bulan.</li>
+<li><b>Ke mana uang keluar</b>: beban terbesar periode ini.</li>
+<li><b>Pemeriksaan</b>: tanda bila ada transaksi tidak seimbang atau arus kas belum diberi kategori.</li>
+</ul>
+<p>Ganti bulan dengan tombol ‹ › atau pilih <i>Setahun penuh</i>.</p>
+</article>
+
+<article id="a5" data-bab="A" data-judul="Mengubah atau menghapus transaksi" data-akses="semua" data-kata="edit ubah hapus salah koreksi">
+<ol class="steps">
+<li>Buka <b>Jurnal</b>, cari transaksinya (bisa ketik ID, keterangan, atau nama akun).</li>
+<li>Ketuk transaksinya untuk melihat rincian, lalu pilih <b>Ubah</b> atau <b>Hapus</b>.</li>
+</ol>
+<p>Pencatat hanya bisa mengubah transaksi yang ia catat sendiri. Pemilik bisa mengubah semuanya. Setiap perubahan tercatat di Log Aktivitas.</p>
+</article>
+
+<article id="a6" data-bab="A" data-judul="Main: game Kedai Jagung" data-akses="semua" data-kata="game main simulasi kedai level kampanye koin peringkat exp naik level galeri cerita emot ekspresi mentor pengaturan beruntun">
+<p>Menu <b>Main</b> berisi game latihan akuntansi. Semua transaksi di game adalah simulasi dan <b>tidak masuk ke pembukuan asli</b>. Kemajuanmu tersimpan per akun, jadi aman berganti HP.</p>
+<ul>
+<li><b>Level</b>: 16 level dalam 4 dunia, dari dasar debit-kredit sampai membaca laporan. Dapatkan 1–3 bintang; level berikutnya terbuka setelah lulus.</li>
+<li><b>Kampanye</b>: kelola kedai virtual 10 hari per bulan. Catat setiap kejadian; di hari ke-10 ada penyesuaian dan rapor. Saldo berlanjut ke bulan berikutnya.</li>
+<li><b>Tantangan harian</b>: 3 soal bertimer. Main tiap hari untuk menjaga streak 🔥.</li>
+<li><b>Koin</b> dipakai di <b>Toko</b> untuk menghias kedai. <b>Peringkat</b> mingguan direset setiap Senin.</li>
+<li><b>Level kedai</b>: poin dari soal menjadi EXP. Makin tinggi level (1–30), tampilan kedai berganti di Lv 5, 10, 20, dan 30, dan barang toko yang lebih mahal ikut terbuka. Setiap naik level ada layar <b>LEVEL UP</b> dan bonus koin.</li>
+<li><b>Galeri</b>: putar ulang cerita pembuka, lihat koleksi ekspresi mentor, dan baca kredit lagu.</li>
+<li><b>Pengaturan</b> (dari menu judul): volume musik dan efek suara, getar, playlist, nama mentor (bawaan Pak Wisdar), dan saklar emot dramatis.</li>
+</ul>
+<p><b>Reaksi dramatis.</b> Jawab <b>5 soal benar berturut-turut</b> (benar di percobaan pertama, tanpa petunjuk, boleh lintas level) atau <b>salah 3 kali berturut-turut</b>, lalu mentor bereaksi dramatis selama 10 detik. Ketuk layar untuk menutupnya, atau matikan di Pengaturan. Penanda 🔥 di atas soal menunjukkan hitungan benar berturut-turut. Hitungan mulai dari nol lagi kalau halaman dimuat ulang. Ekspresi yang pernah muncul tersimpan di Galeri.</p>
+<p>Cara mengisi jurnal di game sama dengan di aplikasi: pilih akun, pilih <b>D</b> (Debit) atau <b>K</b> (Kredit), isi nominal, pastikan seimbang, lalu ketuk <b>Periksa</b>. Petunjuk 💡 mengurangi 2 poin; setelah dua kali salah kamu bisa membuka jawabannya (poin soal itu 0). Topik yang sering salah akan muncul lagi sampai kamu benar dua kali berturut-turut.</p>
+</article>
+
+<!-- ===================== B. DASAR AKUNTANSI ===================== -->
+<article id="b1" data-bab="B" data-judul="Akuntansi itu untuk apa" data-akses="semua" data-kata="pengertian akuntansi pengguna laporan">
+<p>Akuntansi adalah cara <b>mencatat</b> kejadian ekonomi usaha, <b>mengelompokkannya</b>, lalu <b>melaporkannya</b> dalam bentuk yang mudah dibaca.</p>
+<p>Siapa yang memakai laporannya?</p>
+<ul>
+<li><b>Pemilik dan pengelola</b>: untuk tahu usaha untung atau rugi, produk mana yang laku, kapan perlu menghemat.</li>
+<li><b>Pemberi pinjaman</b> (bank, koperasi, program KUR): untuk menilai apakah usaha sanggup membayar cicilan.</li>
+<li><b>Pajak dan pihak lain</b>: sebagai dasar perhitungan dan bukti.</li>
+</ul>
+<p>Untuk usaha kecil di Indonesia, acuan resminya adalah <b>SAK EMKM</b>. Aplikasi ini menyusun laporan yang diminta standar itu: posisi keuangan dan laba rugi, ditambah arus kas dan perubahan modal sebagai pelengkap.</p>
+</article>
+
+<article id="b2" data-bab="B" data-judul="Uang usaha bukan uang pribadi" data-akses="semua" data-kata="entitas prive pribadi pisah" data-tpl="Setoran modal pemilik|Prive (ambil uang pribadi)">
+<p>Prinsip paling penting: <b>usaha diperlakukan sebagai pihak tersendiri</b>, terpisah dari pemiliknya. Hanya kejadian yang menyangkut usaha yang dicatat, dan semuanya diukur dalam rupiah.</p>
+<ul>
+<li>Pemilik memasukkan uang ke usaha → <b>Setoran modal pemilik</b> (modal bertambah).</li>
+<li>Pemilik mengambil uang usaha untuk keperluan rumah → <b>Prive (ambil uang pribadi)</b> (modal berkurang). Prive <i>bukan</i> beban usaha, jadi tidak mengurangi laba.</li>
+</ul>
+<h4>Contoh</h4>
+<p>Anda mengambil Rp200.000 dari kas Cornafa untuk belanja dapur rumah.</p>
+<table class="jx"><tr><th>Akun</th><th>Debit</th><th>Kredit</th></tr>
+<tr><td>3201 Prive</td><td>200.000</td><td></td></tr>
+<tr><td>1101 Kas</td><td></td><td>200.000</td></tr></table>
+<div class="tip">Kebiasaan baik: pisahkan dompet/rekening usaha dan pribadi, atau minimal catat setiap uang yang berpindah di antara keduanya.</div>
+</article>
+
+<article id="b3" data-bab="B" data-judul="Persamaan akuntansi" data-akses="semua" data-kata="aset utang modal persamaan">
+<div class="eqbox">Aset = Utang + Modal</div>
+<ul>
+<li><b>Aset</b>: semua yang dimiliki usaha dan bermanfaat: kas, saldo DANA, stok jagung, cup, kompor, piutang.</li>
+<li><b>Utang (liabilitas)</b>: kewajiban kepada pihak lain: utang ke pemasok, gaji yang belum dibayar, pinjaman.</li>
+<li><b>Modal (ekuitas)</b>: bagian pemilik atas aset, yaitu sisa setelah semua utang dibayar.</li>
+</ul>
+<p>Versi lengkapnya: <b>Aset = Utang + Modal + Pendapatan − Beban − Prive</b>. Pendapatan menambah bagian pemilik; beban dan prive menguranginya.</p>
+<h4>Contoh Cornafa memulai usaha</h4>
+<table class="jx eq3"><tr><th>Kejadian</th><th>Aset</th><th>Utang</th><th>Modal</th></tr>
+<tr><td>Setor modal Rp2.000.000</td><td>+2.000.000</td><td></td><td>+2.000.000</td></tr>
+<tr><td>Beli kompor Rp600.000 tunai</td><td>+600.000 −600.000</td><td></td><td></td></tr>
+<tr><td>Beli jagung Rp300.000, bayar nanti</td><td>+300.000</td><td>+300.000</td><td></td></tr>
+<tr><td><b>Saldo</b></td><td><b>2.300.000</b></td><td><b>300.000</b></td><td><b>2.000.000</b></td></tr></table>
+<p>Setelah setiap kejadian, kedua sisi tetap sama. Itulah yang diperiksa aplikasi di kontrol <i>Persamaan akuntansi</i>.</p>
+</article>
+
+<article id="b4" data-bab="B" data-judul="Satu transaksi, dua sisi" data-akses="semua" data-kata="double entry dua sisi">
+<p>Setiap transaksi mengubah <b>paling sedikit dua akun</b>. Bila satu aset bertambah, harus ada yang mengimbangi: aset lain berkurang, utang bertambah, atau modal bertambah.</p>
+<ul>
+<li>Beli cup tunai: stok bertambah, kas berkurang.</li>
+<li>Beli jagung kredit: stok bertambah, utang bertambah.</li>
+<li>Jual cup: uang bertambah, pendapatan bertambah.</li>
+<li>Bayar listrik: beban bertambah, kas berkurang.</li>
+</ul>
+<p>Cara berpikir ini disebut <i>pembukuan berpasangan</i> (double-entry). Inilah sebabnya setiap transaksi di aplikasi harus seimbang.</p>
+</article>
+
+<article id="b5" data-bab="B" data-judul="Debit dan kredit tanpa pusing" data-akses="semua" data-kata="debit kredit saldo normal bertambah berkurang" data-tpl="Bayar beban operasional">
+<p>Debit artinya <b>sisi kiri</b>, kredit artinya <b>sisi kanan</b>. Keduanya bukan berarti "baik" atau "buruk". Yang perlu diingat hanya tabel ini:</p>
+<table class="jx"><tr><th>Jenis akun</th><th>Bertambah di</th><th>Berkurang di</th></tr>
+<tr><td>Aset (kas, stok, peralatan)</td><td>Debit</td><td>Kredit</td></tr>
+<tr><td>Beban (sewa, gaji, HPP)</td><td>Debit</td><td>Kredit</td></tr>
+<tr><td>Prive</td><td>Debit</td><td>Kredit</td></tr>
+<tr><td>Utang</td><td>Kredit</td><td>Debit</td></tr>
+<tr><td>Modal</td><td>Kredit</td><td>Debit</td></tr>
+<tr><td>Pendapatan (penjualan)</td><td>Kredit</td><td>Debit</td></tr></table>
+<div class="tip"><b>Jembatan keledai:</b> "<b>A-B-P</b> di kiri" (Aset, Beban, Prive bertambah di debit). Sisanya (Utang, Modal, Pendapatan) bertambah di kredit.</div>
+<p>Sisi tempat sebuah akun bertambah disebut <b>saldo normal</b>. Di halaman Akun, setiap akun mencantumkan saldo normalnya.</p>
+<h4>Contoh: bayar gaji Rp500.000 tunai</h4>
+<p>Beban gaji bertambah (debit), kas berkurang (kredit).</p>
+<table class="jx"><tr><th>Akun</th><th>Debit</th><th>Kredit</th></tr>
+<tr><td>5103 Beban Gaji</td><td>500.000</td><td></td></tr>
+<tr><td>1101 Kas</td><td></td><td>500.000</td></tr></table>
+</article>
+
+<article id="b6" data-bab="B" data-judul="Jurnal, buku besar, neraca saldo" data-akses="semua" data-kata="jurnal buku besar ledger neraca saldo trial balance posting">
+<p>Pencatatan berjalan dalam tiga langkah:</p>
+<ol class="steps">
+<li><b>Jurnal</b>: catatan pertama setiap transaksi, urut tanggal, lengkap dengan debit dan kreditnya. Di aplikasi: halaman <b>Jurnal</b>.</li>
+<li><b>Buku besar</b>: kumpulan semua akun beserta saldonya. Isi jurnal "dipindahkan" ke akun masing-masing (disebut <i>posting</i>). Di aplikasi ini terjadi otomatis: Laporan → <b>Buku besar</b>, ketuk akun untuk melihat mutasinya.</li>
+<li><b>Neraca saldo</b>: daftar saldo semua akun pada satu tanggal. Gunanya membuktikan total debit sama dengan total kredit. Di aplikasi: Laporan → <b>Neraca saldo</b>.</li>
+</ol>
+<p>Neraca saldo yang seimbang belum tentu bebas salah. Misalnya, bayar listrik yang tercatat sebagai beban sewa tetap seimbang. Karena itu, pilih akun dengan teliti.</p>
+</article>
+
+<article id="bq" data-bab="B" data-judul="Latihan: dasar akuntansi" data-akses="semua" data-kata="kuis latihan soal">
+<div class="quiz">
+<div class="q" data-ans="2"><p>Pemilik mengambil Rp150.000 dari kas usaha untuk bayar SPP adik. Akun apa yang didebit?</p>
+<ol><li>Beban Lain-lain</li><li>Modal Pemilik</li><li>Prive</li><li>Kas</li></ol>
+<p class="why">Pengambilan untuk keperluan pribadi dicatat sebagai Prive (debit), bukan beban, karena bukan biaya menjalankan usaha.</p></div>
+<div class="q" data-ans="1"><p>Cornafa membeli cup Rp120.000 dan belum membayar. Apa yang terjadi pada persamaan akuntansi?</p>
+<ol><li>Aset naik, modal naik</li><li>Aset naik, utang naik</li><li>Aset naik, aset lain turun</li><li>Utang naik, modal turun</li></ol>
+<p class="why">Stok (aset) bertambah dan muncul kewajiban ke pemasok (utang). Kedua sisi naik Rp120.000.</p></div>
+<div class="q" data-ans="0"><p>Akun mana yang <b>bertambah di sisi kredit</b>?</p>
+<ol><li>Penjualan</li><li>Kas</li><li>Beban Sewa</li><li>Persediaan Bahan Baku</li></ol>
+<p class="why">Pendapatan (Penjualan) bertambah di kredit. Kas, beban, dan persediaan bertambah di debit.</p></div>
+<div class="q" data-ans="3"><p>Apa tujuan utama neraca saldo?</p>
+<ol><li>Menghitung pajak</li><li>Mencatat transaksi pertama kali</li><li>Menunjukkan arus kas</li><li>Membuktikan total debit sama dengan total kredit</li></ol>
+<p class="why">Neraca saldo mendaftar saldo semua akun untuk membuktikan keseimbangan debit dan kredit.</p></div>
+<div class="q" data-ans="1"><p>Total aset Cornafa Rp5.000.000 dan utangnya Rp1.200.000. Berapa modalnya?</p>
+<ol><li>Rp6.200.000</li><li>Rp3.800.000</li><li>Rp1.200.000</li><li>Rp5.000.000</li></ol>
+<p class="why">Modal = Aset − Utang = 5.000.000 − 1.200.000 = 3.800.000.</p></div>
+</div>
+</article>
+
+<!-- ===================== C. DAGANG & PRODUKSI ===================== -->
+<article id="c1" data-bab="C" data-judul="Kenapa HPP dicatat saat menjual" data-akses="semua" data-kata="hpp harga pokok perpetual laba kotor" data-tpl="Penjualan tunai|Penjualan kredit (belum dibayar)">
+<p>Usaha dagang dan produksi punya tiga angka khas: <b>penjualan</b>, <b>harga pokok penjualan (HPP)</b>, dan <b>laba kotor</b>.</p>
+<div class="eqbox">Penjualan − HPP = Laba kotor</div>
+<p>Aplikasi memakai sistem <b>perpetual</b>: setiap kali menjual, stok barang jadi langsung dikurangi sebesar harga pokoknya. Hasilnya, laba kotor dan sisa stok selalu terlihat tanpa menunggu hitung stok akhir bulan.</p>
+<h4>Contoh: jual 10 cup Medium tunai</h4>
+<p>Nilai jual 10 × 15.000 = Rp150.000. Harga pokok 10 × 6.000 = Rp60.000. Laba kotor Rp90.000.</p>
+<table class="jx"><tr><th>Akun</th><th>Debit</th><th>Kredit</th></tr>
+<tr><td>1101 Kas</td><td>150.000</td><td></td></tr>
+<tr><td>4102 Penjualan</td><td></td><td>150.000</td></tr>
+<tr><td>5001 Harga Pokok Penjualan</td><td>60.000</td><td></td></tr>
+<tr><td>1105 Persediaan Barang Jadi</td><td></td><td>60.000</td></tr></table>
+<p>Di template <i>Penjualan tunai</i>, isi nilai penjualan di kotak besar dan harga pokok di kotak kedua. Kotak kedua boleh kosong, tapi laba kotor jadi terlalu besar dan stok tidak berkurang.</p>
+</article>
+
+<article id="c2" data-bab="C" data-judul="Beli bahan baku (tunai, kredit, ongkos kirim)" data-akses="semua" data-kata="beli bahan jagung cup ongkir pembelian" data-tpl="Pembelian bahan baku tunai|Pembelian bahan baku kredit|Ongkos kirim pembelian bahan|Bayar utang usaha|Pembelian perlengkapan tunai">
+<p>Semua bahan yang menjadi bagian produk (jagung, susu, keju, mentega, bumbu, cup, sendok) dicatat ke <b>1104 Persediaan Bahan Baku</b>, bukan langsung ke beban. Bahan baru menjadi biaya saat produknya terjual.</p>
+<ul>
+<li><b>Bayar langsung</b> → template <i>Pembelian bahan baku tunai</i>. Pilih dibayar dari Kas, Bank, atau DANA/QRIS.</li>
+<li><b>Bayar nanti</b> → <i>Pembelian bahan baku kredit</i>. Utang usaha bertambah; saat melunasi pakai <i>Bayar utang usaha</i>.</li>
+<li><b>Ongkos kirim/ojek untuk mengambil bahan</b> → <i>Ongkos kirim pembelian bahan</i>. Ongkos ini menambah nilai bahan, bukan beban terpisah.</li>
+</ul>
+<h4>Contoh: belanja 10 kg jagung Rp180.000 + ongkir Rp15.000</h4>
+<table class="jx"><tr><th>Akun</th><th>Debit</th><th>Kredit</th></tr>
+<tr><td>1104 Persediaan Bahan Baku</td><td>195.000</td><td></td></tr>
+<tr><td>1101 Kas</td><td></td><td>195.000</td></tr></table>
+</article>
+
+<article id="c3" data-bab="C" data-judul="Produksi: bahan menjadi produk" data-akses="semua" data-kata="produksi batch masak barang jadi" data-tpl="Pemakaian bahan untuk produksi">
+<p>Saat bahan dimasak dan dikemas menjadi cup siap jual, nilainya pindah dari bahan baku ke barang jadi. Tidak ada uang keluar, hanya pindah "kantong".</p>
+<table class="jx"><tr><th>Akun</th><th>Debit</th><th>Kredit</th></tr>
+<tr><td>1105 Persediaan Barang Jadi</td><td>240.000</td><td></td></tr>
+<tr><td>1104 Persediaan Bahan Baku</td><td></td><td>240.000</td></tr></table>
+<p>Paling mudah dicatat <b>per batch produksi</b>: jumlahkan nilai semua bahan yang dipakai pada batch itu.</p>
+</article>
+
+<article id="c4" data-bab="C" data-judul="Menghitung harga pokok per cup" data-akses="semua" data-kata="hpp per cup modal harga pokok hitung">
+<p>Harga pokok per cup dipakai setiap kali mengisi kotak HPP saat menjual.</p>
+<div class="eqbox">Harga pokok per cup = Nilai bahan satu batch ÷ Jumlah cup yang dihasilkan</div>
+<h4>Contoh batch Medium</h4>
+<ul>
+<li>Jagung, susu, keju, mentega, bumbu: Rp200.000</li>
+<li>40 cup + sendok: Rp40.000</li>
+<li>Total Rp240.000, menghasilkan 40 cup → <b>Rp6.000 per cup</b></li>
+</ul>
+<p>Hitung ulang bila harga bahan berubah. Simpan angkanya, misalnya di catatan HP: Small Rp4.000, Medium Rp6.000, Large Rp8.000 (angka ilustrasi).</p>
+<div class="tip">Biaya yang tidak masuk ke produk, seperti sewa lapak, listrik, gaji, dan promosi, tidak dimasukkan ke harga pokok. Biaya itu dicatat sebagai beban operasi.</div>
+</article>
+
+<article id="c5" data-bab="C" data-judul="Menjual: tunai, QRIS/DANA, atau kredit" data-akses="semua" data-kata="jual qris dana piutang kredit transfer" data-tpl="Penerimaan piutang|Pendapatan jasa tunai">
+<ul>
+<li><b>Dibayar tunai / QRIS / transfer</b> → <i>Penjualan tunai</i>, lalu pilih uang masuk ke <b>Kas</b>, <b>DANA/QRIS</b>, atau <b>Bank</b>. Pisahkan akunnya agar saldo masing-masing bisa dicocokkan dengan uang fisik dan aplikasi DANA.</li>
+<li><b>Dibayar belakangan</b> (pesanan kantor, titip jual) → <i>Penjualan kredit (belum dibayar)</i>. Piutang bertambah.</li>
+<li><b>Saat pelanggan melunasi</b> → <i>Penerimaan piutang</i>. Ini bukan penjualan baru; piutang berkurang, uang bertambah.</li>
+</ul>
+<div class="tip">Di akhir hari event, cocokkan: total penjualan QRIS di aplikasi DANA harus sama dengan kenaikan saldo akun DANA/QRIS di Beranda.</div>
+</article>
+
+<article id="c6" data-bab="C" data-judul="Retur dan potongan penjualan" data-akses="semua" data-kata="retur potongan diskon kembalikan uang pembeli" data-tpl="Potongan/retur penjualan tunai">
+<p>Bila pembeli mengembalikan produk atau Anda memberi potongan setelah transaksi, jangan menghapus penjualannya. Catat ke akun <b>4103 Retur &amp; Potongan Penjualan</b>. Akun ini mengurangi pendapatan, sehingga penjualan kotor dan potongannya tetap terlihat.</p>
+<table class="jx"><tr><th>Akun</th><th>Debit</th><th>Kredit</th></tr>
+<tr><td>4103 Retur &amp; Potongan Penjualan</td><td>15.000</td><td></td></tr>
+<tr><td>1107 DANA/QRIS</td><td></td><td>15.000</td></tr></table>
+<p>Diskon yang sudah diberikan saat transaksi (harga promo) cukup dicatat dengan nilai setelah diskon di penjualannya.</p>
+</article>
+
+<article id="c7" data-bab="C" data-judul="Retur dan potongan pembelian" data-akses="semua" data-kata="retur pembelian potongan pemasok diskon pelunasan" data-tpl="Retur pembelian ke pemasok|Bayar utang dengan potongan">
+<p>Pada sistem perpetual, pengembalian barang ke pemasok dan potongan dari pemasok <b>mengurangi nilai persediaan</b>.</p>
+<ul>
+<li><b>Mengembalikan jagung rusak</b> yang belum dibayar → <i>Retur pembelian ke pemasok</i>: utang berkurang, persediaan berkurang.</li>
+<li><b>Pemasok memberi potongan karena bayar cepat</b> → <i>Bayar utang dengan potongan</i>. Isi uang yang benar-benar dibayar di kotak pertama dan potongannya di kotak kedua.</li>
+</ul>
+<h4>Contoh: utang Rp500.000, dilunasi Rp490.000 karena potongan 2%</h4>
+<table class="jx"><tr><th>Akun</th><th>Debit</th><th>Kredit</th></tr>
+<tr><td>2101 Utang Usaha</td><td>490.000</td><td></td></tr>
+<tr><td>1101 Kas</td><td></td><td>490.000</td></tr>
+<tr><td>2101 Utang Usaha</td><td>10.000</td><td></td></tr>
+<tr><td>1104 Persediaan Bahan Baku</td><td></td><td>10.000</td></tr></table>
+</article>
+
+<article id="c8" data-bab="C" data-judul="Stok opname: stok fisik vs catatan" data-akses="semua" data-kata="stok opname hitung fisik selisih hilang rusak basi" data-tpl="Stok opname: stok kurang">
+<p>Walau aplikasi mencatat stok terus-menerus, stok fisik bisa berbeda karena bahan basi, tumpah, atau salah hitung. Karena itu, <b>hitung stok fisik minimal sebulan sekali</b> dan sesuaikan catatannya.</p>
+<ol class="steps">
+<li>Hitung nilai bahan dan cup jadi yang benar-benar ada (jumlah × harga pokok).</li>
+<li>Lihat saldo akun 1104 dan 1105 di Laporan → Buku besar.</li>
+<li>Bila fisik lebih kecil, pakai template <i>Stok opname: stok kurang</i> dengan nilai selisihnya.</li>
+</ol>
+<table class="jx"><tr><th>Akun</th><th>Debit</th><th>Kredit</th></tr>
+<tr><td>5001 Harga Pokok Penjualan</td><td>35.000</td><td></td></tr>
+<tr><td>1104 Persediaan Bahan Baku</td><td></td><td>35.000</td></tr></table>
+<p>Selisih yang terus besar adalah tanda perlu dicek: penyimpanan, porsi per cup, atau pencatatan penjualan yang terlewat.</p>
+</article>
+
+<article id="c9" data-bab="C" data-judul="Mengambil produk untuk diri sendiri" data-akses="semua" data-kata="prive barang makan sendiri sampel gratis" data-tpl="Prive barang (ambil produk)">
+<ul>
+<li><b>Dimakan pemilik/keluarga</b> → <i>Prive barang (ambil produk)</i> sebesar harga pokoknya: prive bertambah, stok barang jadi berkurang.</li>
+<li><b>Dibagikan gratis untuk promosi</b> (tester) → mode Jurnal: debit 5105 Beban Pemasaran, kredit 1105 Persediaan Barang Jadi, sebesar harga pokoknya.</li>
+</ul>
+</article>
+
+<article id="cq" data-bab="C" data-judul="Latihan: dagang & produksi" data-akses="semua" data-kata="kuis latihan soal">
+<div class="quiz">
+<div class="q" data-ans="2"><p>Jual 5 cup Large (Rp20.000, harga pokok Rp8.000). Berapa laba kotornya?</p>
+<ol><li>Rp100.000</li><li>Rp40.000</li><li>Rp60.000</li><li>Rp20.000</li></ol>
+<p class="why">Penjualan 100.000 − HPP 40.000 = laba kotor 60.000.</p></div>
+<div class="q" data-ans="0"><p>Ongkos ojek untuk mengambil jagung dari pasar sebaiknya dicatat ke…</p>
+<ol><li>Persediaan Bahan Baku</li><li>Beban Pemasaran</li><li>Beban Lain-lain</li><li>Harga Pokok Penjualan</li></ol>
+<p class="why">Biaya untuk mendapatkan bahan menambah nilai bahan (persediaan), lalu menjadi HPP saat produknya terjual.</p></div>
+<div class="q" data-ans="3"><p>Pelanggan kantor melunasi pesanan bulan lalu Rp300.000. Template yang tepat?</p>
+<ol><li>Penjualan tunai</li><li>Penjualan kredit (belum dibayar)</li><li>Setoran modal pemilik</li><li>Penerimaan piutang</li></ol>
+<p class="why">Penjualannya sudah dicatat bulan lalu sebagai piutang. Sekarang piutang berkurang dan uang bertambah.</p></div>
+<div class="q" data-ans="1"><p>Saat stok opname, bahan baku fisik Rp35.000 lebih kecil dari catatan. Apa yang dilakukan?</p>
+<ol><li>Hapus transaksi pembelian terakhir</li><li>Catat Stok opname: stok kurang Rp35.000</li><li>Abaikan saja</li><li>Tambah setoran modal Rp35.000</li></ol>
+<p class="why">Catatan disesuaikan dengan stok fisik; selisihnya menjadi bagian HPP periode itu.</p></div>
+</div>
+</article>
+
+<!-- ===================== D. AKHIR BULAN ===================== -->
+<article id="d1" data-bab="D" data-judul="Laba tidak sama dengan uang di kas" data-akses="semua" data-kata="akrual basis kas laba berbeda">
+<p>Aplikasi memakai <b>basis akrual</b>: pendapatan dicatat saat produk diserahkan, dan beban dicatat saat terjadi, <b>bukan saat uang diterima atau dibayar</b>. Ini juga yang diminta SAK EMKM.</p>
+<p>Akibatnya, laba dan uang di kas bisa berbeda jauh:</p>
+<ul>
+<li>Penjualan kredit menambah laba sekarang, tapi uangnya baru masuk nanti.</li>
+<li>Membeli stok besar mengurangi kas sekarang, tapi baru menjadi biaya saat terjual.</li>
+<li>Membeli kompor mengurangi kas sekarang, tapi biayanya disebar lewat penyusutan.</li>
+<li>Prive mengurangi kas tetapi tidak mengurangi laba.</li>
+</ul>
+<p>Laporan <b>Arus Kas</b> menjelaskan dari mana uang masuk dan ke mana keluar; <b>Laba Rugi</b> menjelaskan apakah usaha menguntungkan.</p>
+</article>
+
+<article id="d2" data-bab="D" data-judul="Kenapa ada jurnal penyesuaian" data-akses="semua" data-kata="penyesuaian adjusting akhir bulan">
+<p>Beberapa kejadian tidak muncul dari transaksi harian, padahal memengaruhi laba bulan itu. Di akhir bulan, catatan perlu <b>disesuaikan</b> agar pendapatan dan beban masuk ke bulan yang benar. Ada empat jenis:</p>
+<table class="jx"><tr><th>Jenis</th><th>Contoh Cornafa</th><th>Template</th></tr>
+<tr><td>Beban dibayar di muka</td><td>Sewa lapak 6 bulan dibayar sekaligus</td><td>Penyesuaian: sewa terpakai</td></tr>
+<tr><td>Pendapatan diterima di muka</td><td>Uang muka pesanan acara</td><td>Pesanan uang muka diserahkan</td></tr>
+<tr><td>Beban terutang</td><td>Gaji helper bulan ini dibayar tanggal 5 bulan depan</td><td>Penyesuaian: gaji terutang</td></tr>
+<tr><td>Pendapatan yang belum ditagih</td><td>Titip jual di kantin, dibayar akhir bulan</td><td>Penjualan kredit (belum dibayar)</td></tr></table>
+<p>Penyusutan peralatan juga termasuk penyesuaian akhir bulan.</p>
+</article>
+
+<article id="d3" data-bab="D" data-judul="Sewa dibayar di muka" data-akses="semua" data-kata="sewa dibayar di muka prepaid lapak" data-tpl="Bayar sewa di muka|Penyesuaian: sewa terpakai">
+<p>Sewa lapak Rp1.800.000 untuk 6 bulan dibayar 1 Juli. Uang itu belum menjadi beban seluruhnya; bagian yang belum terpakai adalah <b>aset</b>.</p>
+<p><b>1 Juli</b> → <i>Bayar sewa di muka</i>:</p>
+<table class="jx"><tr><th>Akun</th><th>Debit</th><th>Kredit</th></tr>
+<tr><td>1108 Sewa Dibayar di Muka</td><td>1.800.000</td><td></td></tr>
+<tr><td>1106 Bank</td><td></td><td>1.800.000</td></tr></table>
+<p><b>Setiap akhir bulan</b> → <i>Penyesuaian: sewa terpakai</i> sebesar 1.800.000 ÷ 6 = Rp300.000:</p>
+<table class="jx"><tr><th>Akun</th><th>Debit</th><th>Kredit</th></tr>
+<tr><td>5101 Beban Sewa</td><td>300.000</td><td></td></tr>
+<tr><td>1108 Sewa Dibayar di Muka</td><td></td><td>300.000</td></tr></table>
+<p>Setelah 6 bulan, saldo 1108 menjadi nol dan setiap bulan menanggung bebannya sendiri.</p>
+</article>
+
+<article id="d4" data-bab="D" data-judul="Uang muka pesanan" data-akses="semua" data-kata="uang muka dp pesanan acara diterima di muka" data-tpl="Terima uang muka pesanan|Pesanan uang muka diserahkan">
+<p>Panitia acara memesan 100 cup Medium untuk tanggal 20 dan membayar penuh Rp1.500.000 pada tanggal 10. Sebelum cup diserahkan, uang itu adalah <b>kewajiban</b>, bukan pendapatan.</p>
+<p><b>Tanggal 10</b> → <i>Terima uang muka pesanan</i>:</p>
+<table class="jx"><tr><th>Akun</th><th>Debit</th><th>Kredit</th></tr>
+<tr><td>1107 DANA/QRIS</td><td>1.500.000</td><td></td></tr>
+<tr><td>2103 Pendapatan Diterima di Muka</td><td></td><td>1.500.000</td></tr></table>
+<p><b>Tanggal 20, cup diserahkan</b> → <i>Pesanan uang muka diserahkan</i> (isi juga harga pokok 100 × 6.000):</p>
+<table class="jx"><tr><th>Akun</th><th>Debit</th><th>Kredit</th></tr>
+<tr><td>2103 Pendapatan Diterima di Muka</td><td>1.500.000</td><td></td></tr>
+<tr><td>4102 Penjualan</td><td></td><td>1.500.000</td></tr>
+<tr><td>5001 Harga Pokok Penjualan</td><td>600.000</td><td></td></tr>
+<tr><td>1105 Persediaan Barang Jadi</td><td></td><td>600.000</td></tr></table>
+<p>Bila uang muka hanya sebagian (misalnya 50%), sisanya dicatat saat penyerahan dengan <i>Penjualan tunai</i> atau <i>Penjualan kredit</i>.</p>
+</article>
+
+<article id="d5" data-bab="D" data-judul="Gaji yang belum dibayar" data-akses="semua" data-kata="gaji terutang akrual helper upah" data-tpl="Penyesuaian: gaji terutang|Bayar utang gaji">
+<p>Helper bekerja sepanjang Oktober dan digaji Rp1.200.000 pada 5 November. Bebannya milik Oktober, jadi dicatat di akhir Oktober walau belum dibayar.</p>
+<p><b>31 Oktober</b> → <i>Penyesuaian: gaji terutang</i>:</p>
+<table class="jx"><tr><th>Akun</th><th>Debit</th><th>Kredit</th></tr>
+<tr><td>5103 Beban Gaji</td><td>1.200.000</td><td></td></tr>
+<tr><td>2102 Utang Gaji</td><td></td><td>1.200.000</td></tr></table>
+<p><b>5 November</b> → <i>Bayar utang gaji</i>: utang gaji berkurang, kas berkurang. Beban tidak dicatat dua kali.</p>
+<p>Cara yang sama berlaku untuk tagihan listrik atau air yang datang setelah bulan berakhir.</p>
+</article>
+
+<article id="d6" data-bab="D" data-judul="Penyusutan peralatan" data-akses="semua" data-kata="penyusutan depresiasi kompor freezer peralatan garis lurus" data-tpl="Penyusutan peralatan|Beli peralatan tunai">
+<p>Peralatan seperti kompor, panci, freezer, dan booth dipakai bertahun-tahun. Harganya tidak dibebankan sekaligus, tetapi <b>disebar sepanjang umur pakainya</b>.</p>
+<div class="eqbox">Penyusutan per bulan = (Harga beli − Nilai sisa) ÷ Umur pakai dalam bulan</div>
+<h4>Contoh: freezer Rp3.000.000, dipakai 3 tahun, nilai sisa nol</h4>
+<p>3.000.000 ÷ 36 = <b>Rp83.333 per bulan</b>. Setiap akhir bulan → <i>Penyusutan peralatan</i>:</p>
+<table class="jx"><tr><th>Akun</th><th>Debit</th><th>Kredit</th></tr>
+<tr><td>5104 Beban Penyusutan</td><td>83.333</td><td></td></tr>
+<tr><td>1202 Akumulasi Penyusutan Peralatan</td><td></td><td>83.333</td></tr></table>
+<p>Harga beli tetap tercatat utuh di 1201 Peralatan, sedangkan 1202 Akumulasi Penyusutan tampil sebagai pengurang di Posisi Keuangan. Selisih keduanya adalah <b>nilai buku</b>.</p>
+<p class="note">Bagian ini memakai metode garis lurus, cara paling sederhana yang lazim untuk usaha kecil.</p>
+</article>
+
+<article id="d7" data-bab="D" data-judul="Tutup buku: otomatis di aplikasi" data-akses="semua" data-kata="tutup buku closing laba ditahan periode">
+<p>Dalam buku teks, di akhir periode akun pendapatan, beban, dan prive "ditutup" ke modal agar periode berikutnya mulai dari nol. Langkah ini disebut <b>jurnal penutup</b>.</p>
+<p>Di aplikasi ini <b>tidak perlu dilakukan manual</b>. Saat Anda memilih sebuah bulan:</p>
+<ul>
+<li>Laba Rugi hanya menghitung pendapatan dan beban bulan itu.</li>
+<li>Laba bulan-bulan sebelumnya otomatis masuk ke <b>modal awal</b> (baris <i>Laba ditahan</i> di Buku besar).</li>
+<li>Aset, utang, dan modal tetap berlanjut dari bulan ke bulan.</li>
+</ul>
+<p>Karena itu, jangan menghapus transaksi lama agar saldo awal tetap benar.</p>
+</article>
+
+<article id="d8" data-bab="D" data-judul="Salah catat: ubah atau koreksi?" data-akses="semua" data-kata="salah koreksi correcting ubah hapus">
+<ul>
+<li><b>Masih di bulan berjalan</b> → buka Jurnal, lalu <b>Ubah</b> transaksinya. Ini paling bersih.</li>
+<li><b>Bulan lalu sudah dilaporkan atau dikirim ke pihak lain</b> → biarkan transaksi lama, lalu buat <b>jurnal koreksi</b> di bulan ini dengan mode Jurnal.</li>
+</ul>
+<h4>Contoh jurnal koreksi</h4>
+<p>Bayar listrik Rp150.000 tercatat sebagai Beban Sewa. Koreksinya: debit 5102 Beban Utilitas 150.000, kredit 5101 Beban Sewa 150.000.</p>
+<div class="tip">Cara mencari jurnal koreksi: bandingkan jurnal yang salah dengan jurnal yang seharusnya, lalu catat selisihnya.</div>
+</article>
+
+<article id="d9" data-bab="D" data-judul="Daftar cek akhir bulan" data-akses="semua" data-kata="checklist akhir bulan rutin">
+<ol class="steps">
+<li>Pastikan semua penjualan dan belanja bulan ini sudah tercatat.</li>
+<li>Cocokkan saldo <b>Kas</b> dengan uang fisik, <b>DANA/QRIS</b> dengan aplikasi DANA, dan <b>Bank</b> dengan mutasi rekening.</li>
+<li>Stok opname bahan baku dan barang jadi.</li>
+<li>Catat penyesuaian: sewa terpakai, gaji terutang, uang muka yang sudah diserahkan.</li>
+<li>Catat penyusutan peralatan.</li>
+<li>Buka Beranda → <b>Pemeriksaan</b> harus "Semua beres".</li>
+<li>Baca laporan, unduh PDF bila perlu arsip.</li>
+</ol>
+</article>
+
+<article id="dq" data-bab="D" data-judul="Latihan: akhir bulan" data-akses="semua" data-kata="kuis latihan soal">
+<div class="quiz">
+<div class="q" data-ans="1"><p>Sewa 12 bulan Rp3.600.000 dibayar sekaligus. Berapa beban sewa setiap bulan?</p>
+<ol><li>Rp3.600.000</li><li>Rp300.000</li><li>Rp360.000</li><li>Rp0</li></ol>
+<p class="why">Biaya dibagi rata ke bulan yang memakai manfaatnya: 3.600.000 ÷ 12 = 300.000.</p></div>
+<div class="q" data-ans="2"><p>Uang muka pesanan yang belum diserahkan dicatat sebagai…</p>
+<ol><li>Penjualan</li><li>Modal</li><li>Utang (pendapatan diterima di muka)</li><li>Piutang</li></ol>
+<p class="why">Selama produk belum diserahkan, usaha masih berutang barang kepada pemesan.</p></div>
+<div class="q" data-ans="0"><p>Kompor Rp1.200.000, umur 2 tahun, nilai sisa nol. Penyusutan per bulan?</p>
+<ol><li>Rp50.000</li><li>Rp100.000</li><li>Rp600.000</li><li>Rp1.200.000</li></ol>
+<p class="why">1.200.000 ÷ 24 bulan = 50.000.</p></div>
+<div class="q" data-ans="3"><p>Laba bulan ini Rp2 juta, tapi kas hanya naik Rp300 ribu. Penyebab yang <b>mungkin</b>?</p>
+<ol><li>Banyak penjualan kredit</li><li>Membeli stok besar</li><li>Ada prive</li><li>Semua di atas</li></ol>
+<p class="why">Ketiganya membuat laba berbeda dari perubahan kas (basis akrual).</p></div>
+</div>
+</article>
+
+<!-- ===================== E. MEMBACA LAPORAN ===================== -->
+<article id="e1" data-bab="E" data-judul="Laba Rugi baris demi baris" data-akses="semua" data-kata="laba rugi income statement pendapatan beban">
+<p>Laba Rugi menjawab: <b>untung atau rugi selama periode ini?</b></p>
+<table class="jx"><tr><th>Baris</th><th>Artinya</th></tr>
+<tr><td>Pendapatan bersih</td><td>Penjualan dikurangi retur &amp; potongan</td></tr>
+<tr><td>Harga pokok penjualan</td><td>Biaya bahan dari produk yang terjual</td></tr>
+<tr><td><b>Laba kotor</b></td><td>Sisa untuk menutup biaya operasi</td></tr>
+<tr><td>Beban operasi</td><td>Sewa, listrik, gaji, promosi, penyusutan</td></tr>
+<tr><td><b>Laba operasi</b></td><td>Hasil dari kegiatan utama usaha</td></tr>
+<tr><td>Lain-lain</td><td>Di luar kegiatan utama, misalnya bunga</td></tr>
+<tr><td><b>Laba bersih</b></td><td>Hasil akhir periode</td></tr></table>
+<p>Bila laba kotor kecil, periksa harga jual atau harga pokok. Bila laba kotor bagus tetapi laba operasi kecil, periksa beban operasi.</p>
+</article>
+
+<article id="e2" data-bab="E" data-judul="Posisi Keuangan (neraca)" data-akses="semua" data-kata="posisi keuangan neraca balance sheet lancar">
+<p>Posisi Keuangan adalah "foto" usaha pada satu tanggal: apa yang dimiliki, apa yang terutang, dan berapa bagian pemilik.</p>
+<ul>
+<li><b>Aset lancar</b>: akan menjadi uang atau terpakai dalam setahun (kas, DANA, piutang, stok, sewa dibayar di muka).</li>
+<li><b>Aset tidak lancar</b>: dipakai lebih dari setahun (peralatan dikurangi akumulasi penyusutan).</li>
+<li><b>Liabilitas jangka pendek</b>: dibayar dalam setahun (utang pemasok, utang gaji, uang muka pesanan).</li>
+<li><b>Liabilitas jangka panjang</b>: lebih dari setahun (pinjaman bank).</li>
+<li><b>Ekuitas</b>: modal akhir dari Laporan Perubahan Modal.</li>
+</ul>
+<p>Total aset selalu sama dengan total liabilitas + ekuitas.</p>
+</article>
+
+<article id="e3" data-bab="E" data-judul="Perubahan Modal" data-akses="semua" data-kata="perubahan modal ekuitas prive">
+<div class="eqbox">Modal awal + Setoran + Laba bersih − Prive = Modal akhir</div>
+<p>Laporan ini menunjukkan apakah kekayaan pemilik di usaha bertumbuh. Bila prive lebih besar dari laba berbulan-bulan, modal terus menyusut. Ini tanda pemilik mengambil lebih dari yang dihasilkan usaha.</p>
+</article>
+
+<article id="e4" data-bab="E" data-judul="Arus Kas" data-akses="semua" data-kata="arus kas cash flow operasi investasi pendanaan" data-tpl="Terima pinjaman bank|Bayar cicilan pokok pinjaman">
+<p>Arus Kas menjawab: <b>dari mana uang datang, ke mana perginya?</b> Aplikasi memakai metode langsung: penerimaan dan pembayaran kas ditampilkan apa adanya, dikelompokkan menjadi tiga kegiatan:</p>
+<ul>
+<li><b>Operasi</b>: kegiatan harian: terima dari pelanggan, bayar pemasok, gaji, sewa.</li>
+<li><b>Investasi</b>: beli atau jual aset jangka panjang seperti peralatan.</li>
+<li><b>Pendanaan</b>: dari dan untuk pemilik atau pemberi pinjaman: setoran modal, prive, pinjaman, cicilan.</li>
+</ul>
+<p>Usaha yang sehat biasanya punya arus kas <b>operasi positif</b>. Kalau operasi negatif terus dan ditutup dengan setoran atau pinjaman, usaha belum mandiri.</p>
+<div class="tip">Baris <i>Belum dikategorikan</i> muncul bila ada transaksi kas tanpa kategori. Buka transaksinya di Jurnal, lalu Ubah dan pilih kategorinya.</div>
+</article>
+
+<article id="e5" data-bab="E" data-judul="Usaha sehat atau tidak? (rasio)" data-akses="semua" data-kata="rasio margin sehat analisis perputaran persediaan rasio lancar">
+<p>Beberapa angka sederhana untuk menilai kesehatan usaha:</p>
+<table class="jx"><tr><th>Rasio</th><th>Rumus</th><th>Cara membaca</th></tr>
+<tr><td>Margin laba kotor</td><td>Laba kotor ÷ Pendapatan</td><td>Tampil di Beranda. Turun? Harga bahan naik atau harga jual terlalu rendah.</td></tr>
+<tr><td>Margin laba bersih</td><td>Laba bersih ÷ Pendapatan</td><td>Berapa rupiah laba dari tiap Rp100 penjualan.</td></tr>
+<tr><td>Rasio lancar</td><td>Aset lancar ÷ Liabilitas jangka pendek</td><td>Di atas 1 berarti aset lancar cukup untuk membayar utang jangka pendek.</td></tr>
+<tr><td>Perputaran persediaan</td><td>HPP ÷ Rata-rata persediaan</td><td>Makin tinggi makin cepat stok habis; penting untuk bahan yang mudah basi.</td></tr></table>
+<p>Bandingkan juga dengan <b>bulan lalu</b> (analisis horizontal), dan lihat <b>porsi tiap beban terhadap pendapatan</b> (analisis vertikal), misalnya sewa 15% dari penjualan.</p>
+<h4>Contoh</h4>
+<p>Pendapatan Rp6.000.000, laba kotor Rp3.600.000, laba bersih Rp1.500.000. Margin laba kotor 60%, margin laba bersih 25%.</p>
+</article>
+
+<article id="eq" data-bab="E" data-judul="Latihan: membaca laporan" data-akses="semua" data-kata="kuis latihan soal">
+<div class="quiz">
+<div class="q" data-ans="1"><p>Pembelian freezer tunai masuk ke kelompok arus kas…</p>
+<ol><li>Operasi</li><li>Investasi</li><li>Pendanaan</li><li>Tidak masuk arus kas</li></ol>
+<p class="why">Membeli aset jangka panjang adalah kegiatan investasi.</p></div>
+<div class="q" data-ans="0"><p>Pendapatan Rp4.000.000, HPP Rp1.600.000. Margin laba kotor?</p>
+<ol><li>60%</li><li>40%</li><li>25%</li><li>160%</li></ol>
+<p class="why">Laba kotor 2.400.000 ÷ 4.000.000 = 60%.</p></div>
+<div class="q" data-ans="2"><p>Aset lancar Rp3 juta, utang jangka pendek Rp4 juta. Artinya?</p>
+<ol><li>Usaha pasti bangkrut</li><li>Kondisi ideal</li><li>Aset lancar belum cukup menutup utang jangka pendek</li><li>Laba bulan ini negatif</li></ol>
+<p class="why">Rasio lancar 0,75 (di bawah 1). Perlu menambah kas atau mengatur jadwal pembayaran.</p></div>
+</div>
+</article>
+
+<!-- ===================== F. UNTUK PEMILIK ===================== -->
+<article id="f1" data-bab="F" data-judul="Mengelola akun" data-akses="pemilik" data-kata="akun chart of accounts kode kelompok kas kontra tambah">
+<ul>
+<li><b>Kode</b>: angka pertama menunjukkan jenis: 1 aset, 2 utang, 3 modal, 4 pendapatan, 5 beban.</li>
+<li><b>Saldo normal</b>: sisi tempat akun bertambah (lihat topik Debit dan kredit).</li>
+<li><b>Klasifikasi</b> menentukan letak akun di laporan, misalnya Aset Lancar atau Beban Operasi.</li>
+<li><b>Kelompok "Kas"</b> menandai akun uang (Kas, Bank, DANA/QRIS). Hanya akun ini yang masuk Laporan Arus Kas.</li>
+<li><b>Akun kontra</b> memakai saldo normal kebalikan dari jenisnya: Akumulasi Penyusutan (Aset, Credit) dan Retur Penjualan (Pendapatan, Debit).</li>
+</ul>
+<p>Kode akun yang sudah dipakai di jurnal tidak bisa diganti atau dihapus, tetapi nama dan klasifikasinya masih bisa diubah.</p>
+<div class="tip">Contoh menambah e-wallet lain: kode 1109, nama "GoPay", jenis Aset, saldo normal Debit, klasifikasi Aset Lancar, kelompok <b>Kas</b>.</div>
+</article>
+
+<article id="f2" data-bab="F" data-judul="Membuat template sendiri" data-akses="pemilik" data-kata="template buat baru pilih filter">
+<p>Buat template untuk transaksi yang sering berulang: Akun → Template transaksi → Tambah template.</p>
+<ul>
+<li><b>Debit/Kredit</b>: pilih akun tetap, atau "pilih …" agar pencatat memilih saat mencatat (misalnya pilih akun kas).</li>
+<li><b>Pasangan kedua</b> (opsional): dipakai untuk HPP pada penjualan, atau potongan pada pelunasan.</li>
+<li><b>Arus kas</b>: kategori dan detail yang otomatis menempel di baris akun kas.</li>
+<li><b>Petunjuk singkat</b>: muncul di bawah pilihan template untuk membantu pencatat.</li>
+</ul>
+<p>Tombol ↑ mengatur urutan. Taruh template yang paling sering dipakai di atas.</p>
+</article>
+
+<article id="f3" data-bab="F" data-judul="Pengguna dan peran" data-akses="pemilik" data-kata="pengguna pencatat pemilik peran pin reset nonaktif">
+<table class="jx"><tr><th>Peran</th><th>Bisa</th></tr>
+<tr><td>Pemilik</td><td>Semua halaman, semua transaksi, laporan &amp; PDF, akun, pengaturan, pengguna</td></tr>
+<tr><td>Pencatat</td><td>Beranda, Catat, Jurnal (hanya transaksinya sendiri), Panduan, Profil</td></tr></table>
+<ul>
+<li><b>Menambah pencatat</b>: Pengaturan → Pengguna → Tambah pengguna. Beri nama pengguna dan PIN awal, lalu bagikan link aplikasi.</li>
+<li><b>Lupa PIN</b>: buka penggunanya, isi PIN baru.</li>
+<li><b>Berhenti bekerja</b>: ubah status menjadi Nonaktif. Ia langsung keluar dari semua perangkat, dan catatannya tetap tersimpan.</li>
+</ul>
+</article>
+
+<article id="f4" data-bab="F" data-judul="Email rekap dan pengingat" data-akses="pemilik" data-kata="email rekap pengingat otomatis pdf">
+<ul>
+<li><b>Rekap bulanan</b> dikirim tanggal yang Anda pilih sekitar pukul 07.00, berisi angka utama, perbandingan dengan bulan sebelumnya, 5 beban terbesar, dan PDF laporan.</li>
+<li><b>Pengingat</b> dikirim bila beberapa hari tidak ada transaksi, atau ada jurnal yang bermasalah.</li>
+<li>Atur di Pengaturan, lalu ketuk <b>Aktifkan email otomatis</b>. Jadwal ikut menyesuaikan setiap kali pengaturan disimpan.</li>
+<li>Untuk mengirim rekap sekarang: Laporan → <b>Kirim ke email</b>.</li>
+</ul>
+</article>
+
+<article id="f5" data-bab="F" data-judul="Spreadsheet, data contoh, dan log" data-akses="pemilik" data-kata="spreadsheet sheets contoh hapus log aktivitas cadangan">
+<ul>
+<li>Semua data tersimpan di Google Sheet milik Anda. Link-nya ada di Pengaturan → Aktivitas terakhir → Buka spreadsheet.</li>
+<li><b>Data contoh</b> (TRX001–TRX020, baris kuning) dihapus lewat Pengaturan → Hapus data contoh, sebelum mulai mencatat data asli.</li>
+<li>Pemilik boleh mengetik langsung di sheet Jurnal Umum. Isi kolom <i>Dicatat oleh</i> bila transaksi itu milik pencatat tertentu.</li>
+<li><b>Log Aktivitas</b> mencatat siapa masuk, menambah, mengubah, atau menghapus transaksi.</li>
+<li>Cadangan: di Google Sheets pilih File → Buat salinan secara berkala, atau andalkan Histori versi.</li>
+</ul>
+</article>
+
+<article id="f6" data-bab="F" data-judul="Saldo awal untuk usaha yang sudah berjalan" data-akses="pemilik" data-kata="saldo awal mulai pindah dari buku lama">
+<p>Kalau Cornafa sudah berjalan sebelum memakai aplikasi, catat satu transaksi <b>Saldo awal</b> di tanggal mulai dengan mode Jurnal:</p>
+<ul>
+<li><b>Debit</b> semua aset: kas, saldo DANA, bank, stok bahan, stok barang jadi, peralatan, piutang.</li>
+<li><b>Kredit</b> semua utang yang masih ada, ditambah <b>Modal Pemilik</b> sebesar selisihnya.</li>
+</ul>
+<table class="jx"><tr><th>Akun</th><th>Debit</th><th>Kredit</th></tr>
+<tr><td>1101 Kas</td><td>500.000</td><td></td></tr>
+<tr><td>1107 DANA/QRIS</td><td>1.250.000</td><td></td></tr>
+<tr><td>1104 Persediaan Bahan Baku</td><td>400.000</td><td></td></tr>
+<tr><td>1201 Peralatan</td><td>2.500.000</td><td></td></tr>
+<tr><td>2101 Utang Usaha</td><td></td><td>300.000</td></tr>
+<tr><td>3101 Modal Pemilik</td><td></td><td>4.350.000</td></tr></table>
+</article>
+
+<!-- ===================== G. TANYA JAWAB ===================== -->
+<article id="g1" data-bab="G" data-judul="Saldo kas minus, kenapa?" data-akses="semua" data-kata="kas minus negatif">
+<p>Uang fisik tidak mungkin minus, jadi pasti ada yang terlewat atau salah akun. Penyebab paling umum:</p>
+<ul>
+<li>Penjualan tunai belum dicatat, padahal pengeluarannya sudah.</li>
+<li>Pembayaran lewat DANA atau bank tercatat dari Kas.</li>
+<li>Setoran modal atau saldo awal belum dicatat.</li>
+</ul>
+<p>Buka Laporan → Buku besar → ketuk akun Kas untuk menelusuri mutasinya.</p>
+</article>
+
+<article id="g2" data-bab="G" data-judul="Laba besar, tapi uang sedikit" data-akses="semua" data-kata="laba besar uang sedikit kas kurang">
+<p>Lihat topik <a href="#d1">Laba tidak sama dengan uang di kas</a>. Periksa di Beranda: apakah piutang tinggi, stok menumpuk, atau prive besar? Lalu buka Laporan → Arus Kas untuk melihat ke mana uangnya pergi.</p>
+</article>
+
+<article id="g3" data-bab="G" data-judul="Transaksi tidak balance" data-akses="semua" data-kata="tidak balance seimbang merah selisih">
+<p>Dari aplikasi, transaksi tidak seimbang tidak bisa disimpan. Bila muncul tanda "tidak balance", biasanya karena seseorang mengetik langsung di spreadsheet. Buka Jurnal, cari ID-nya, lalu Ubah agar debit dan kredit sama.</p>
+</article>
+
+<article id="g4" data-bab="G" data-judul="Arus kas 'belum dikategorikan'" data-akses="semua" data-kata="belum dikategorikan kategori arus kas kuning">
+<p>Artinya ada baris Kas, Bank, atau DANA/QRIS tanpa kategori Operasi, Investasi, atau Pendanaan. Buka Jurnal, temukan transaksinya (ditandai "arus kas belum dikategorikan"), lalu Ubah dan pilih kategorinya. Pemindahan uang antar akun kas (Kas ke Bank) memang tidak perlu kategori.</p>
+</article>
+
+<article id="g5" data-bab="G" data-judul="Saldo DANA tidak sama dengan aplikasi DANA" data-akses="semua" data-kata="dana qris selisih cocok" data-tpl="Pindah dana kas ↔ bank">
+<ul>
+<li>Ada penjualan QRIS yang tercatat ke Kas.</li>
+<li>Ada belanja yang dibayar dengan DANA tetapi tercatat dari Kas.</li>
+<li>Ada biaya admin atau penarikan ke bank yang belum dicatat. Catat penarikan ke bank dengan <i>Pindah dana kas ↔ bank</i>, dan biaya admin dengan <i>Bayar beban operasional</i>.</li>
+</ul>
+</article>
+
+<article id="g6" data-bab="G" data-judul="Salah tanggal atau nominal" data-akses="semua" data-kata="salah tanggal nominal ubah">
+<p>Buka Jurnal → ketuk transaksi → <b>Ubah</b>. Bila tanggalnya diubah, transaksi otomatis pindah ke urutan yang benar. Untuk transaksi bulan yang sudah dilaporkan, lihat topik <a href="#d8">Salah catat</a>.</p>
+</article>
+
+<!-- ===================== H. ISTILAH ===================== -->
+<article id="h1" data-bab="H" data-judul="Daftar istilah Indonesia–Inggris" data-akses="semua" data-kata="istilah glosarium inggris">
+<table class="jx"><tr><th>Indonesia</th><th>Inggris</th></tr>
+<tr><td>Aset</td><td>Assets</td></tr>
+<tr><td>Liabilitas / utang</td><td>Liabilities</td></tr>
+<tr><td>Ekuitas / modal pemilik</td><td>Owner's equity / capital</td></tr>
+<tr><td>Prive</td><td>Owner's drawings</td></tr>
+<tr><td>Pendapatan / penjualan</td><td>Revenue / sales revenue</td></tr>
+<tr><td>Beban</td><td>Expenses</td></tr>
+<tr><td>Harga pokok penjualan (HPP)</td><td>Cost of goods sold</td></tr>
+<tr><td>Laba kotor</td><td>Gross profit</td></tr>
+<tr><td>Laba bersih</td><td>Net income</td></tr>
+<tr><td>Persediaan</td><td>Inventory</td></tr>
+<tr><td>Piutang usaha</td><td>Accounts receivable</td></tr>
+<tr><td>Utang usaha</td><td>Accounts payable</td></tr>
+<tr><td>Jurnal</td><td>Journal</td></tr>
+<tr><td>Buku besar</td><td>Ledger</td></tr>
+<tr><td>Neraca saldo</td><td>Trial balance</td></tr>
+<tr><td>Jurnal penyesuaian</td><td>Adjusting entries</td></tr>
+<tr><td>Jurnal penutup</td><td>Closing entries</td></tr>
+<tr><td>Jurnal koreksi</td><td>Correcting entries</td></tr>
+<tr><td>Beban dibayar di muka</td><td>Prepaid expenses</td></tr>
+<tr><td>Pendapatan diterima di muka</td><td>Unearned revenue</td></tr>
+<tr><td>Beban terutang</td><td>Accrued expenses</td></tr>
+<tr><td>Penyusutan</td><td>Depreciation</td></tr>
+<tr><td>Akumulasi penyusutan</td><td>Accumulated depreciation</td></tr>
+<tr><td>Laporan posisi keuangan / neraca</td><td>Statement of financial position</td></tr>
+<tr><td>Laporan laba rugi</td><td>Income statement</td></tr>
+<tr><td>Laporan arus kas</td><td>Statement of cash flows</td></tr>
+<tr><td>Retur dan potongan penjualan</td><td>Sales returns and allowances / discounts</td></tr>
+<tr><td>Stok opname</td><td>Physical inventory count</td></tr></table>
+</article>
