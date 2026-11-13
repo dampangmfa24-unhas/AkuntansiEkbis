@@ -1,6 +1,6 @@
 # AkuntansiEkbis
 Alat Pencatatan Keuangan Berbasis Appsript Google
-# Panduan Visual Instalasi & Deployment Aplikasi Keuangan
+# Panduan Instalasi & Deployment Aplikasi Keuangan
 
 **Versi Bahasa Indonesia — desktop/laptop — untuk pemula**
 
