@@ -4,8 +4,6 @@ Alat Pencatatan Keuangan Berbasis Appsript Google
 
 **Versi Bahasa Indonesia — desktop/laptop — untuk pemula**
 
-> **Tentang gambar:** Semua gambar bertanda **REKONSTRUKSI TAMPILAN DESKTOP · ILUSTRASI**. Gambar dibuat berdasarkan alur editor Google Sheets, Google Apps Script, dan tampilan aplikasi; bukan screenshot dari akun Google sungguhan. Bahasa, lokasi tombol, dan dialog bisa sedikit berbeda.
-
 **Cakupan:** pemasangan mandiri di Google Sheet baru, menjalankan inisialisasi, membuat PIN Pemilik, menerbitkan web app, dan mencoba login. Bagian personalisasi bisnis dan penggunaan harian tidak dibahas.
 
 ## Yang harus disiapkan
